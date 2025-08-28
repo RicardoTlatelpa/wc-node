@@ -1,0 +1,27 @@
+{
+  "name": "@crawler/worker",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node-dev -r dotenv/config -r tsconfig-paths/register src/index.ts",
+    "build": "tsc -p .",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@crawler/contracts": "workspace:*",
+    "@crawler/db": "workspace:*",
+    "@crawler/queue": "workspace:*",
+    "@crawler/shared": "workspace:*",
+    "@prisma/client": "^5.22.0",
+    "bullmq": "^5.9.0",
+    "cheerio": "^1.0.0-rc.12",
+    "dotenv": "^17.2.1",
+    "ioredis": "^5.4.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
+  }
+}

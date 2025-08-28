@@ -1,0 +1,24 @@
+{
+  "name": "@crawler/api",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "build": "tsc -p .",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@crawler/queue": "workspace:*",
+    "@crawler/shared": "workspace:*",
+    "@crawler/db": "workspace:*",
+    "@prisma/client": "^5.22.0",
+    "fastify": "^4.28.1",
+    "zod": "^3.23.8",
+    "pino": "^9.9.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
